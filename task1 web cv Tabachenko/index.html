@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anton Tabachenko</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="sec header">
+        <div class="wr">
+            <a class="logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <div class="nav">
+
+                <a class="nav_item" href="javascript://0" onclick="slowScroll('.about')">обо мне</a>
+
+                <a class="nav_item" href="javascript://0" onclick="slowScroll('.experience')">опыт работы</a>
+
+                <a class="nav_item" href="javascript://0" onclick="slowScroll('.skills')">навыки</a>
+
+                <a class="nav_item" href="javascript://0" onclick="slowScroll('.education')">образование</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sec about">
+        <div class="wr main_content">
+            <div class="block block-left">
+                <img class="foto" src="img/foto.jpg" alt="">
+            </div>
+            <div class="block block-right">
+                <div class="block_inn">
+
+                    <h1>Привет! Я Антон </h1>
+                    <h2> Я обычный верстальщик, который до недавнего времени работал в студии, очень хочу выучить
+                        современные технологии и устроится на
+                        нормальную работу </h2>
+
+                    <div class="contacts">
+                        <div class="contact-item">
+                            <div class="icon"></div>
+                            <div class="descr"><span class="boldy">Телефон:</span> 0984200680</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"></div>
+                            <div class="descr"> <span class="boldy"> Email:</span> antontab91@gmail.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"></div>
+                            <div class="descr"><span class="boldy">Адресс:</span> Киев , ул. Николая Василенко</div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="socials">
+                        <a target="_blank" href="https://www.facebook.com/brightwoodd?ref=bookmarks"
+                            class="sociials-item">
+                            <img src="img/fb.svg" alt="">
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/anton-tabachenko/" class="sociials-item">
+                            <img src="img/link.svg" alt="">
+                        </a>
+                        <!-- <a href="" class="sociials-item">
+                                <img src="" alt="">
+                            </a> -->
+                    </div>
+                    <!-- <div class="spec_text">
+                        <span class="boldy">PS</span> Всю информацию обо мне вы сможете узнать перейдя по ссылкам
+                        соц-сетей
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec experience"></div>
+    <div class="sec skills"></div>
+    <div class="sec education"></div>
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        function slowScroll(id) {
+            var offset = 0;
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - offset
+            }, 500);
+            return false;
+        }
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $(".header").addClass("otehal");
+
+            } else {
+                $(".header").removeClass("otehal");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
